@@ -1,0 +1,31 @@
+# mandatory server config
+solarwinds:
+  server: 192.168.1.1
+  user: admin
+  password: **redacted**
+
+# file naming.
+# Network & date can be set to True or False.
+file:
+  name: Sessions_SecureCRT
+  path: C:/ # No path is same directory as the script
+  include_date: yes
+
+# Configure whether logging is saved to a separate file or to cli output
+logging: screen # 'screen' or 'file'
+logging-level: info # debug, info, warning, error, critical
+
+
+# systems that have to be included that are not in the solarwinds database, such as console switches. Necessary to define name, address and folder.
+include:
+  - test: # name of the device
+      address: 8.8.8.8 # ip or hostname
+      folder: Other # manually specify the folder
+      protocol: ssh2 # default is ssh, thus this protocol is necessary
+  - test2:
+      address: 8.8.4.4
+      folder: Other\Google
+
+# everything in excluded is matched with a wildcard. Please be as specific as possible.
+exclude:
+  - router
