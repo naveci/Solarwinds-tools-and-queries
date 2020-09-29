@@ -12,3 +12,7 @@ You can freely install SWQL studio and log in on the main Solarwinds appliance t
 
 Most queries and some scripts rely on a certain naming scheme or attribute to be present. This will be different for every environment. Please be aware of this and change accordingly.
 An example of such a custom attribute is the DeviceCategory (='network') under NodesCustomProperties. This is how, in this instance of Solarwinds, we differentiate networking devices. You will need to find something that helps you differentiate them from Windows and/or Linux devices. An example could be Vendor, which is part of the Nodes table and therefore not a customproperty. Please refer to the online Solarwinds documentation for more info.
+
+At this moment, I no longer work in an environment that utilizes Solarwind. Therefore, I can provide only limited assistance and I'm no longer aware of the latest developments of the product. It could be that some of these queries no longer work in newer version of the product.
+
+All queries only request data and do not make any changes. The code is provided as-is.
